@@ -28,7 +28,7 @@ class EmailReader:
                 if subject and sender:
                     # subject = subject.lower()
                     # sender = sender.lower()
-                    if subject == 'Spurqlabs14_AutomationTest: Please Reset Your Password' and sender == 'udp-admin@xaqua.io':
+                    if subject == 'AutomationTest: Please Reset Your Password' and sender == 'sender@email.com':
                         body = self.extract_email_body(msg)
                         if body:
                             otp = self.extract_otp(body)
@@ -80,10 +80,10 @@ class EmailReader:
 
 
 # if __name__ == '__main__':
-#     email_reader = read_email(self, "harish.ekal@spurqlabs.com", "wvuyfwyztdnfpkdp")
+#     email_reader = read_email(self, "user@email.com", "password")
 # Example usage:
 # email_reader = EmailReader()
-# otp = email_reader.read_email("xaqua.spurqlabs@outlook.com", "Spur@2024")
+# otp = email_reader.read_email("email@outlook.com", "password")
 # if otp:
 #     print("OTP:", otp)
 # else:
